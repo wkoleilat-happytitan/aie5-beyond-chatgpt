@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-My version of the AIE Beyond ChatGPT
-=======
 ---
 title: BeyondChatGPT Demo
 emoji: 📉
