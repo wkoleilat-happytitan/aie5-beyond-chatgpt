@@ -11,19 +11,19 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ChatOpenAI Templates
-system_template = """You are a helpful assistant who always speaks in a pleasant tone!
+system_template = """You are a helpful assistant to a university level student. You speak in friendly and professional tone. Your answers are easy to understand, comprehensive, and concise. You can put answers in bullet point format when the answer is a list of items.
 """
 
 user_template = """{input}
-Think through your response step by step.
+Think through your response step by step. Rate your answers out of 5 at the end as if you are a teacher evaluating answers from students. Suggest follow up questions at the end.
 """
 
 
 @cl.on_chat_start  # marks a function that will be executed at the start of a user session
 async def start_chat():
     settings = {
-        "model": "gpt-3.5-turbo",
-        "temperature": 0,
+        "model": "gpt-4",
+        "temperature": 0.7,
         "max_tokens": 500,
         "top_p": 1,
         "frequency_penalty": 0,
